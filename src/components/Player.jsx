@@ -5,7 +5,11 @@ export const Player = () => {
     <Bounds fit clip observe margin={10}>
       <mesh position={[0, 0, 10]}>
         <boxGeometry args={[15, 15, 20]} />
-        <meshLambertMaterial color={"#f6049d"} emissive={"#c31313"} flatShading />
+        <meshLambertMaterial
+          color={"#f6049d"}
+          emissive={"#c31313"}
+          flatShading
+        />
       </mesh>
     </Bounds>
   );
