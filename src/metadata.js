@@ -7,4 +7,10 @@ export const rows = [
       { tileIndex: 5, height: 50 },
     ],
   },
+  {
+    type: "car",
+    direction: false,
+    speed: 1,
+    vehicles: [{ initialTileIndex: 2, color: 0xff0000 }],
+  },
 ];
