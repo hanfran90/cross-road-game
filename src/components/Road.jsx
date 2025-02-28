@@ -1,7 +1,6 @@
 import { tileSize, tilesPerRow } from "../constants";
 
 export const Road = ({ rowIndex, children }) => {
-//   console.log(rowIndex, children);
   return (
     <group position-y={rowIndex * tileSize}>
       <mesh>

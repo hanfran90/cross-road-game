@@ -1,17 +1,17 @@
 import { Road } from "./Road";
-import { Car } from "./Car";
+import { Truck } from "./Truck";
 
-export const CarLane = ({ rowIndex, rowData }) => {
+export const TruckLane = ({ rowIndex, rowData }) => {
   return (
     <Road rowIndex={rowIndex}>
       {rowData.vehicles.map((vehicle, index) => (
-        <Car
+        <Truck
           key={index}
           rowIndex={rowIndex}
+          color={vehicle.color}
           initialTileIndex={vehicle.initialTileIndex}
           direction={rowData.direction}
           speed={rowData.speed}
-          color={vehicle.color}
         />
       ))}
     </Road>

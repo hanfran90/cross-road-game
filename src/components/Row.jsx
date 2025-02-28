@@ -1,5 +1,6 @@
 import { Forest } from "./Forest";
 import { CarLane } from "./CarLane";
+import { TruckLane } from "./TruckLane";
 
 export const Row = ({ rowIndex, rowData }) => {
   switch (rowData.type) {
@@ -9,6 +10,10 @@ export const Row = ({ rowIndex, rowData }) => {
 
     case "car": {
       return <CarLane rowIndex={rowIndex} rowData={rowData} />;
+    }
+
+    case "truck": {
+      return <TruckLane rowIndex={rowIndex} rowData={rowData} />;
     }
   }
 };

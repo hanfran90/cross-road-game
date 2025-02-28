@@ -8,7 +8,6 @@ export const Car = ({
   speed,
   color,
 }) => {
-//   console.log(rowIndex, initialTileIndex, direction, speed, color);
   return (
     <group
       position-x={initialTileIndex * tileSize}
