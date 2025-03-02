@@ -1,3 +1,5 @@
+import { endsUpInValidPosition } from "../utilities/endsUpInValidPostion";
+
 export const state = {
   currentRow: 0,
   currentTile: 0,
@@ -5,6 +7,13 @@ export const state = {
 };
 
 export const queueMove = (direction) => {
+  const isValidMove = endsUpInValidPosition(
+    { rowIndex: state.currentRow, tileIndex: state.currentTile },
+    [...state.movesQueue, direction]
+  );
+
+  if (!isValidMove) return;
+
   state.movesQueue.push(direction);
 };
 
