@@ -1,6 +1,5 @@
 import { Canvas } from "@react-three/fiber";
 import { gridSize, tilesPerRow } from "../constants";
-import { DirectionalLight } from "./DirectionalLight";
 
 export const Scene = ({ children }) => {
   return (
@@ -17,7 +16,6 @@ export const Scene = ({ children }) => {
         args={[gridSize, tilesPerRow, 0xff0000, "teal"]}
         rotation={[Math.PI / 2, 0, 0]}
       />
-      <DirectionalLight />
       {children}
     </Canvas>
   );
